@@ -1,0 +1,4 @@
+data_ingetion:
+  root_dir: dataset/data_ingestion
+  local_data_file: dataset/data_ingestion/archive.zip
+  unzip_dir: dataset/data_ingestion
