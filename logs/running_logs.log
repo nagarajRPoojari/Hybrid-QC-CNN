@@ -62,3 +62,7 @@
 [2024-01-08 23:05:54,576 : INFO : common : created directory at: model/]
 [2024-01-08 23:05:57,654 : INFO : common : created directory at: dataset/data_ingestion]
 [2024-01-08 23:05:59,980 : WARNING : functional : Model was constructed with shape (None, 224, 224, 3) for input KerasTensor(type_spec=TensorSpec(shape=(None, 224, 224, 3), dtype=tf.float32, name='input_5'), name='input_5', description="created by layer 'input_5'"), but it was called on an input with incompatible shape (None, 224, 224, 1).]
+[2024-01-08 23:09:14,853 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2024-01-08 23:09:14,857 : INFO : common : yaml file: params.yaml loaded successfully]
+[2024-01-08 23:09:14,859 : INFO : common : created directory at: model/]
+[2024-01-08 23:09:17,199 : INFO : common : created directory at: dataset/data_ingestion]
