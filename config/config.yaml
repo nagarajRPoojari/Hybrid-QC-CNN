@@ -2,3 +2,10 @@ data_ingetion:
   root_dir: dataset/data_ingestion
   local_data_file: dataset/data_ingestion/archive.zip
   unzip_dir: dataset/data_ingestion
+
+classical_model_config:
+  root_dir: model/
+  data_path: dataset/data_ingestion
+  model_ckpt: model/classical/
+  model_name: ResNet50
+  num_classes: 23
