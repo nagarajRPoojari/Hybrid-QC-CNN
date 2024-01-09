@@ -66,3 +66,17 @@
 [2024-01-08 23:09:14,857 : INFO : common : yaml file: params.yaml loaded successfully]
 [2024-01-08 23:09:14,859 : INFO : common : created directory at: model/]
 [2024-01-08 23:09:17,199 : INFO : common : created directory at: dataset/data_ingestion]
+[2024-01-09 10:37:35,369 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2024-01-09 10:37:35,410 : INFO : common : yaml file: params.yaml loaded successfully]
+[2024-01-09 10:37:35,412 : INFO : common : created directory at: model/]
+[2024-01-09 10:37:37,392 : INFO : common : created directory at: dataset/data_ingestion]
+[2024-01-09 10:37:42,464 : WARNING : deprecation : From c:\Users\nagas\anaconda3\envs\cirq\lib\site-packages\tensorflow\python\autograph\pyct\static_analysis\liveness.py:83: Analyzer.lamba_check (from tensorflow.python.autograph.pyct.static_analysis.liveness) is deprecated and will be removed after 2023-09-23.
+Instructions for updating:
+Lambda fuctions will be no more assumed to be used in the statement where they are used, or at least in the same block. https://github.com/tensorflow/tensorflow/issues/56089]
+[2024-01-09 10:44:00,092 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2024-01-09 10:44:00,099 : INFO : common : yaml file: params.yaml loaded successfully]
+[2024-01-09 10:44:00,101 : INFO : common : created directory at: model/]
+[2024-01-09 10:51:51,492 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2024-01-09 10:51:51,494 : INFO : common : yaml file: params.yaml loaded successfully]
+[2024-01-09 10:51:51,497 : INFO : common : created directory at: model/]
+[2024-01-09 10:51:53,524 : INFO : common : created directory at: dataset/data_ingestion]

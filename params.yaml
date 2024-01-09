@@ -4,3 +4,7 @@ ClassicalTrainingArguments:
   optimizer: adam
   metrics: accuracy
   loss: categorical_crossentropy
+
+QuantumTrainingArguments:
+  num_train_epochs: 1
+  train_batch_size: 32

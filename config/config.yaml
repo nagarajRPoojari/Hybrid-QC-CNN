@@ -9,3 +9,12 @@ classical_model_config:
   model_ckpt: model/classical/
   model_name: ResNet50
   num_classes: 23
+  img_size: [224, 224]
+
+quantum_model_config:
+  root_dir: model/
+  data_path: dataset/data_ingestion
+  model_ckpt: model/quantum/
+  model_name: ResNet50
+  num_classes: 23
+  img_size: [224, 224]
