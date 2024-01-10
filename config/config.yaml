@@ -9,7 +9,7 @@ classical_model_config:
   model_ckpt: model/classical/
   model_name: ResNet50
   num_classes: 23
-  img_size: [224, 224]
+  img_size: [256, 256]
 
 quantum_model_config:
   root_dir: model/
@@ -17,4 +17,4 @@ quantum_model_config:
   model_ckpt: model/quantum/
   model_name: ResNet50
   num_classes: 23
-  img_size: [224, 224]
+  img_size: [256, 256]
