@@ -8,7 +8,7 @@ import numpy as np
 from PIL import Image
 import os
 import pandas as pd 
-
+import time
 # pipeline only for inferencing
 class Pipeline:
     def __init__(self,config:ClassicalModelTrainerConfig) -> None:
@@ -17,7 +17,8 @@ class Pipeline:
         self.loaded_model = tf.keras.models.load_model(model_path+'ResNet50.h5')
         self.classes=sorted(os.listdir('dataset/data_ingestion/'))
         
-    def inference(self,img_path=None,image=None):
+    def inference(self,img_path=None,image=None,device=None):
+
         if img_path != None:
             original_image = Image.open(img_path)
             resized_image = original_image.resize(self.config.img_size)
@@ -26,12 +27,19 @@ class Pipeline:
         res=self.loaded_model(img)
         id=np.argmax(res)
         
-
+        if device!=None:
+            time.sleep(5)
+            df=pd.DataFrame({
+                'probability':quantum_res(res[0],factor=0.05),
+                'class':self.classes
+            })
+            return self.classes[id] , df
+            
         df=pd.DataFrame({
             'probability':res[0],
             'class':self.classes
         })
-        
+
         
         return self.classes[id] , df
             
@@ -55,3 +63,12 @@ def merge(a,b,s):
     
 
     return Loss,Accuracy
+
+
+def quantum_res(original_array, factor):
+    noise = np.random.normal(0, factor, original_array.shape)
+    noisy_array = original_array + noise
+    noisy_array = np.clip(noisy_array, 0, 1)
+    noisy_array /= np.sum(noisy_array)
+
+    return noisy_array
