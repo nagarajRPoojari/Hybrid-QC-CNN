@@ -8,7 +8,7 @@ from HybridQCCNN.pipeline import Pipeline , merge
 warnings.filterwarnings("ignore")
 
 st.set_page_config(layout="wide")
-st.title("Hi , ")
+st.title("Hybrid Classical Quantum CNN")
 
 @st.cache_resource()
 def load_model():
@@ -96,3 +96,4 @@ elif graph==ops[2]:
     
     col1.line_chart(a)
     col2.line_chart(b)
+    
