@@ -6,6 +6,10 @@ src/HybridQCCNN.egg-info/SOURCES.txt
 src/HybridQCCNN.egg-info/dependency_links.txt
 src/HybridQCCNN.egg-info/top_level.txt
 src/HybridQCCNN/components/__init__.py
+src/HybridQCCNN/components/classical_model.py
+src/HybridQCCNN/components/data_ingetion.py
+src/HybridQCCNN/components/data_transformation.py
+src/HybridQCCNN/components/quantum_model.py
 src/HybridQCCNN/config/__init__.py
 src/HybridQCCNN/config/configuration.py
 src/HybridQCCNN/constants/__init__.py
