@@ -30,7 +30,7 @@ selected_model = c2.selectbox("Select model", ["Resnet50", "Hybrid-quantum-Resne
 if selected_model == "Resnet50":
     device = ["CPU"]
 elif selected_model == "Hybrid-quantum-Resnet50":
-    device = ["qiskit.aer", "default.qubit"]
+    device = ["IBM simulator-qiskit.aer", "pennylane simulator-default.qubit","IBM Qiskit kyoto(Hardware)"]
 else:
     device = []
     
