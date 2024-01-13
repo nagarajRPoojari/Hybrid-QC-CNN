@@ -36,6 +36,16 @@ class QCNN:
             for i in range(self.qubits):
                 qml.RY(self.window[i//self.size][i%self.size]*(pi/2),i)
             
+            qml.PauliZ(0)
+            qml.PauliZ(1)
+            qml.PauliZ(2)
+            qml.PauliZ(3)
+            
+            for i in range(16):
+                qml.CNOT(i,i+1)
+            StronglyEntanglingLayers(params, wires=list(range(self.qubits)))
+            StronglyEntanglingLayers(params, wires=list(range(self.qubits)))
+            StronglyEntanglingLayers(params, wires=list(range(self.qubits)))
             StronglyEntanglingLayers(params, wires=list(range(self.qubits)))
                 
             return [qml.expval(qml.PauliZ(i))for i in range(self.qubits)]
