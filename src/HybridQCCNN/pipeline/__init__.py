@@ -9,6 +9,7 @@ from PIL import Image
 import os
 import pandas as pd 
 import time
+from HybridQCCNN.components.model_loader import ModelLoader
 # pipeline only for inferencing
 class Pipeline:
     def __init__(self,config:ClassicalModelTrainerConfig) -> None:
@@ -18,6 +19,9 @@ class Pipeline:
         self.classes=sorted(os.listdir('dataset/data_ingestion/'))
         
     def inference(self,img_path=None,image=None,device=None):
+        if device=='QPU':
+            model_loader=ModelLoader(model='HybridRenNet50',device='QPU')
+            return None , model_loader
 
         if img_path != None:
             original_image = Image.open(img_path)
@@ -41,7 +45,7 @@ class Pipeline:
         })
 
         
-        return self.classes[id] , df
+        return 1,self.classes[id] , df
             
 
 def merge(a,b,s):
