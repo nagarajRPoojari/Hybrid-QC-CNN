@@ -76,31 +76,12 @@ class QuantumModelTrainer:
         
         self.model = models.Model(inputs=inputs, outputs=predictions)
 
-    def train(self, train_data , parallel=True):
-        
-        classical_model=self.model
-        classical_model.compile(optimizer=self.config.optimizer, loss=self.config.loss, metrics=[self.config.metrics])
-        optimizer = tf.optimizers.Adam(learning_rate=0.001)
-        loss=tf.keras.losses.categorical_crossentropy
-        windows_size=4
-        params=np.array(np.random.rand(4,4,3), requires_grad=True)
-        for epoch in range(self.config.num_train_epochs):
-            for step,(train_img,train_pred) in enumerate((train_data)):
-                res, qnodes=self.qcnn_trainer(train_img, windows_size, params, parallel)
-                
-                
-                with tf.GradientTape() as tape:
-                    pred=classical_model(res)
-                    loss_value=loss(pred,train_pred)
-                    
-                gradients = tape.gradient(loss, classical_model.trainable_variables)
-                optimizer.apply_gradients(zip(gradients, classical_model.trainable_variables))
 
-                quantum_grads=self.compute_quantum_gradients(qnodes, classical_model.inputs)
                 
                 
                   
-            
+                  
+                
     def qcnn_trainer(self,train_img,window_size,params,parallel=True):
         final=[]
         for i in range(0,56, window_size):

@@ -10,7 +10,7 @@ warnings.filterwarnings("ignore")
 
 
 st.set_page_config(page_title="Quantum",page_icon=":rocket:",layout="wide")
-st.title("Hybrid Classical Quantum CNN")
+st.title("Quantum Threads")
 
 @st.cache_resource()
 def load_model():

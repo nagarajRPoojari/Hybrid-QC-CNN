@@ -238,3 +238,6 @@ Lambda fuctions will be no more assumed to be used in the statement where they a
 [2024-01-11 22:12:11,087 : INFO : common : yaml file: config\config.yaml loaded successfully]
 [2024-01-11 22:12:11,092 : INFO : common : yaml file: params.yaml loaded successfully]
 [2024-01-11 22:12:11,178 : INFO : common : created directory at: model/]
+[2024-01-12 18:44:32,765 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2024-01-12 18:44:32,804 : INFO : common : yaml file: params.yaml loaded successfully]
+[2024-01-12 18:44:32,806 : INFO : common : created directory at: model/]
