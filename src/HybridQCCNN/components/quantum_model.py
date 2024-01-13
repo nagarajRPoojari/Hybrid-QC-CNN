@@ -8,15 +8,7 @@ import dask
 from numpy import pi
 from pennylane import numpy as np
 
-import tensorflow as tf
-from tensorflow.keras.applications import ResNet50 , InceptionV3
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras import layers, models
-from tensorflow.keras.applications.resnet50 import preprocess_input, decode_predictions
-import numpy as np
-from tensorflow.keras.layers.experimental import preprocessing
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Input
+
 
 
 
